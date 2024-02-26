@@ -59,7 +59,9 @@ console.log( classNames[ classNames.length - 1 ] )
 // Note that we do - 1 because length starts counting from 1 and array keys start counting from 0
 
 // Exercise
-// Remove the first name in the classNames array, but without using numbers
+// Remove the first name in the classNames array, but without using the key numbers
 // Remove the last name in the classNames array, but without using numbers
 // Extra: create a string that lists all the class names separated by using a - (ie. name1 - name2 - name3) 
 
+// Exercise
+// Search for a specific name in the array (ie. Jha) and remove that name from the array
