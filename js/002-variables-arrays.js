@@ -71,3 +71,14 @@ classNamesConsole.join(" - ");
 
 // Exercise
 // Search for a specific name in the array (ie. Jha) and remove that name from the array
+
+// Create a new array called kickedOut by 
+let kickedOut = classNames.splice(0, 1);
+// TODO
+
+// Create an empty array called kickedOut. Remove the first name from the classNames array and add that person to the kickedOut array
+let kickedOut = [];
+var kickedOutPerson = classNamesConsole.shift();
+kickedOut.push(kickedOutPerson);
+
+
