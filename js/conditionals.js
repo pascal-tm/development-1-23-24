@@ -29,7 +29,18 @@ if (isOdd || number < 3)
 // Count te characters that are in that password variable
 // Check whether the name has a length that is longer than 10 characters
 // Check whether the name contains an ! or & ?
-// If both conditions (length and ? or !) aren't met, you need to print this to the console, saying that the password doesn't meet the requirements. If the password does meet the requirements, you don't need to do anything.
+// If both conditions (length and ? or !) aren't met, you need to print this to the console, saying that the password doesn't meet the requirements. If the password meets the requirements, you don't need to do anything.
+let password = "blablabla!";
+
+let isLongerThan10Characters = password.length > 10;
+let containsExclamationMark = password.includes('!');
+let containsQuestionMark = password.includes('?');
+
+if (!isLongerThan10Characters && (!containsExclamationMark || !containsQuestionMark))
+{
+    Console.log(`The password (${password}) you used doesn't meet the requirements `);
+}
+
 
 // >
 // Bigger than
