@@ -29,9 +29,17 @@ let modulo = number1 % number2;
 // But actually we use it mostly to determine whether a number is odd or even
 let isOdd = 7 % 2;
 
-// TODO: increment
-// ++variableName
+// Increment
+let increment = 6;
+++increment;
+console.log(increment);
+// There's a difference between pre-increment (++increment) and post-increment (increment++), but it's too advanced to explain right now
+// It's preferred to use a pre-increment (performance wise)
 
+// Decrement
+let decrement = 5;
+--decrement;
+console.log(decrement);
 
 // == != (===)
 // Returns true if the condition is met, without checking the type
