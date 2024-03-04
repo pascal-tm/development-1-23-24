@@ -38,26 +38,90 @@ let containsQuestionMark = password.includes('?');
 
 if (!isLongerThan10Characters && (!containsExclamationMark || !containsQuestionMark))
 {
-    Console.log(`The password (${password}) you used doesn't meet the requirements `);
+    console.log(`The password (${password}) you used doesn't meet the requirements `);
 }
 
 
 // >
 // Bigger than
+let numberToCheck = 10;
+if ( numberToCheck > 8 )
+{
+    console.log(`${numberToCheck} is bigger than 8`);
+}
 
 // >=
 // Bigger than or equal to
+if ( numberToCheck >= 10 )
+{
+    console.log(`${numberToCheck} is bigger than or equal to 10`);
+}
 
 // <
-// Small than
+// Smaller than
+if ( numberToCheck < 11 )
+{
+    console.log(`${numberToCheck} is smaller than 11`);
+}
 
 // <=
 // Smaller than or equal to
+if ( numberToCheck <= 10 )
+{
+    console.log(`${numberToCheck} is smaller than or equal to 10`);
+}
 
-
-// if shorthand '' ? '' : ''
 
 // if else
+if( true )
+{
+    console.log("This condition resolves to true");
+}
+else
+{
+    console.log("This condition resolves to false");
+}
+
+// If elseif
+let gender = null;
+if( gender == "m" )
+{
+    console.log("This person is m");
+}
+else if ( gender == "f" )
+{
+    console.log("This person is f");
+}
+else if ( gender == "x" )
+{
+    console.log("This person is x");
+}
+else
+{
+    console.log("This person hasn't shared their gender");
+}
+
+// Switch
+let gender2 = "m";
+switch(gender2) {
+    case "m":
+        console.log("(switch: ) This person is m");
+        break;
+    case "f":
+        console.log("(switch: ) This person is m");
+        break;
+    case "x":
+        console.log("(switch: ) This person is x");
+        break;
+    default:
+        console.log("(switch: ) This person hasn't shared their gender");
+}
+
+// if else shorthand '' ? '' : ''
+let amountOfReservations = 1;
+let reservationStringShortHand = `There ${ amountOfReservations > 1 ? "are" : "is" } ${amountOfReservations} reservation${ amountOfReservations > 1 ? "s" : "" } ${amountOfReservations} left`;
+console.log(reservationStringShortHand);
+
 
 // Exercise
 // Create a variable called number that contains a number between 0 and 100;
