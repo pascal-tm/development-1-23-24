@@ -1,4 +1,5 @@
 // Conditionals
+console.log("%cJS - CONDITIONALS", "font-size: 24px; font-weight: bold");
 
 // if
 let number = 7;
@@ -129,5 +130,26 @@ console.log(reservationStringShortHand);
 // If the number is a multiple of 3, you need to print "Fizz" instead of that number.
 // If the number is a multiple of 5, you need to print "Buzz" instead of that number.
 // If the number is a multiple of both 3 and 5, you need to print "FizzBuzz" instead of that number.
+// Addition: Make the variable number a random number between 0 and 100. So every time you refresh the page, the number variable will be different.
+let numberExercise = 2;
 
-// switch
+if ( numberExercise % 3 == 0 && numberExercise % 5 == 0 )
+{
+    console.log("FizzBuzz");
+}
+else if ( numberExercise % 3 == 0 )
+{
+    console.log("Fizz");
+}
+else if ( numberExercise % 5 == 0 )
+{
+    console.log("Buzz");
+}
+else
+{
+    console.log(numberExercise);
+}
+
+var randomNumberBetween0and100 = Math.floor(Math.random()*101);
+// * 101 because random will never return a number higher than 0.99999999...
+

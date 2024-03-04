@@ -1,4 +1,7 @@
 // Operators
+console.log("%cJS - OPERATORS", "font-size: 24px; font-weight: bold");
+
+
 // ---
 // +
 let string1 = "this is a";

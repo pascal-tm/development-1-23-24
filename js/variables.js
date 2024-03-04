@@ -1,3 +1,7 @@
+// VARIABLES
+console.log("%cJS - VARIABLES", "font-size: 24px; font-weight: bold");
+
+
 // Console
 console.log('hello');
 

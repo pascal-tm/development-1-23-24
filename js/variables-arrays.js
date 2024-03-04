@@ -1,3 +1,7 @@
+// Variables: arrays
+console.log("%cJS - VARIABLES: ARRAYS", "font-size: 24px; font-weight: bold");
+
+
 // arrays
 let classNames = [ 
     "Filip", 
@@ -66,19 +70,37 @@ classNames.shift(); // remove first item
 classNames.pop(); // remove last item
 
 // Extra
-classNamesConsole.join(" - ");
+// Create a string from the array that contains the class names, but the class names need to be separated by the following delimited: " - "
+// Also note that at the end of there string, there can't be a trailing " - "
+classNames.push("Maria", "Laura", "Agata", "Victor"); // add some more names to the array
+console.log(classNames.join(" - "));
 
 
 // Exercise
-// Search for a specific name in the array (ie. Jha) and remove that name from the array
-
-// Create a new array called kickedOut by 
+// Remove the first name from the classNames array 
+// Add that person to a new array called kickedOut
 let kickedOut = classNames.splice(0, 1);
-// TODO
+console.log(kickedOut);
 
-// Create an empty array called kickedOut. Remove the first name from the classNames array and add that person to the kickedOut array
-let kickedOut = [];
-var kickedOutPerson = classNamesConsole.shift();
-kickedOut.push(kickedOutPerson);
+// Exercise
+// Create an empty array called kickedOut.
+// Search for a specific name in the array (ie. Jha) and remove that name from the array
+// Add that person to the kickedOut array
+let kickedOutArray = [];
+let kickedOutPerson = classNames.shift();
+kickedOutArray.push(kickedOutPerson);
+console.log(kickedOutArray);
+
+
+// Addition
+// In stead of removing the first person in that array search for a specific name in the array (ie. Jha) and remove that person
+let keyOfClassNameToFind = classNames.indexOf("Laura");
+let kickedOutArray2 = [];
+let kickedOutPerson2 = classNames.splice(keyOfClassNameToFind, 1);
+kickedOutArray2.push(kickedOutPerson2[0]);
+console.log(kickedOutArray2);
+
+
+
 
 
