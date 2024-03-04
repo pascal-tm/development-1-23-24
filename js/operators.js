@@ -29,6 +29,9 @@ let modulo = number1 % number2;
 // But actually we use it mostly to determine whether a number is odd or even
 let isOdd = 7 % 2;
 
+// TODO: increment
+// ++variableName
+
 
 // == != (===)
 // Returns true if the condition is met, without checking the type
