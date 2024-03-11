@@ -83,8 +83,49 @@ for (var key in classObject)
 // Add the following properties: teacher (string), students (array with strings), beamer (boolean). You can add more if you feel like it
 // Print out the object in the console in the following format:
 // key: (object key), value: (object value)
+var classObjectEx = {
+    teacher: "Pascal",
+    students: ["Andrea", "Laura", "Petra", "Martin"],
+    beamer: true
+}
+
+for (var key in classObjectEx)
+{
+    console.log(`Ex - key: ${key}, value: ${classObjectEx[key]}`);
+}
 
 // Loop over the students array inside of the classObject and print out every one's name in the console
+for (let key in classObjectEx[ "students" ] )
+{
+    console.log( classObjectEx[ "students" ][ key ] );
+}
+
+// Add another property to the classObject which is called studentPrintout
+// This property is a function that prints all the names that are in the classObject.students property
+// Call this function from outside of the classObject to print out the student names that are inside of this object
+
+/*
+ Solution by redefining the object and adding the property on declaration:
+
+    var classObjectEx2 = {
+        teacher: "Pascal",
+        students: ["Andrea", "Laura", "Petra", "Martin"],
+        beamer: true,
+        studentPrintout: function() {
+    }
+}
+*/
+
+classObjectEx[ "studentPrintout" ] = function() {
+    for (let key in classObjectEx[ "students" ] )
+    {
+        console.log( 'addition: ' + classObjectEx[ "students" ][ key ] );
+    }
+}
+
+// Call the function
+// Don't forget to add the ()!
+classObjectEx["studentPrintout"]();
 
 
 

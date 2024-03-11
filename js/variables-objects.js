@@ -32,5 +32,8 @@ let company = {
 // You can nest objects within objects without limit.
 
 
+// pass by reference and pass by value
+
+
 // This notation forms the basis for Object Oriented Programming (= classes)
 // If we have time, we'll see some more about this later. It's not really required to be able to write JavaScript, but it will help to keep your code clean and clear, especially if you are working on large projects
