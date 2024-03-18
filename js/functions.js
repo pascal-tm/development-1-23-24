@@ -79,7 +79,6 @@ var shortHandPersonalizedGreeting = (name) => `Hello ${name}`;
 /*
     Is exactly the same as writing:
 
-    
     function personalizedGreeting(name)
     {
         return `Hello ${name}`;
@@ -99,3 +98,18 @@ console.log( shortHandPersonalizedGreeting("Pascal") );
 
 // Addition:
 // Make the printOut function take two numbers as arguments
+
+
+// Anonymous functions
+// TODO
+
+
+// Exercise
+// Create an object called mathHelper. Add four properties to this object 
+// - multiplicate
+// - divide
+// - isEven
+// - printOut
+// The functionality is exactly the same as the 
+
+// Now add an extra property called counter. The default value of this property is 0. This property will keep track of how many times a function of the mathHelper has been called. This means that every time multiplicate, divide, isEven or printOut is called, the counter needs to be incremented with 1.
