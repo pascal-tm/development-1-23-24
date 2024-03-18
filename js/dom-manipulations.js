@@ -8,12 +8,11 @@ document.getElementById("alertBox1");
 // Get by classname
 // Returns an array (HTMLCollection). You need to use a for loop to manipulate the returned result 
 let elements = document.getElementsByClassName("box1");
-/*for (let key in elements)
+for (let element of elements)
 {
-    let element = elements[key];
     element.classList.remove("alert-primary");
     element.classList.add("alert-danger");
-}*/
+}
 
 // Or getting the first element from the array:
 let firstElement = elements[0];
