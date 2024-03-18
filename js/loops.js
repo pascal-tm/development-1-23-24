@@ -105,17 +105,19 @@ for (let key in classObjectEx[ "students" ] )
 // Call this function from outside of the classObject to print out the student names that are inside of this object
 
 /*
- Solution by redefining the object and adding the property on declaration:
+Here's a solution by defining the object and adding the property 'studentPrintout' on declaration:
 
     var classObjectEx2 = {
         teacher: "Pascal",
         students: ["Andrea", "Laura", "Petra", "Martin"],
         beamer: true,
         studentPrintout: function() {
-    }
+            // ... see below for functionality
+        }
 }
 */
 
+// Here the studentPrintout property is added to the classObjectEx after it has already been declared
 classObjectEx[ "studentPrintout" ] = function() {
     for (let key in classObjectEx[ "students" ] )
     {
@@ -130,5 +132,7 @@ classObjectEx["studentPrintout"]();
 
 
 // while
+// TBC
 
 // do while
+// TBC

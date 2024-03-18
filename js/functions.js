@@ -96,20 +96,59 @@ console.log( shortHandPersonalizedGreeting("Pascal") );
 
 // Create a function called printOut without parameters that calls the three above functions and prints out the results to the console.
 
+function multiplicate (number1, number2)
+{
+    return number1 * number2;
+}
+
+function divide (number1, number2)
+{
+    return number1 / number2;
+}
+
+function isEven (number1)
+{
+    return (number1 % 2) ? false : true;
+    // easier notation: !(number1 % 2); ! flips the value of a boolean, meaning true becomes false and false becomes true
+}
+
+function printOut()
+{
+   console.log( multiplicate(4, 10) );
+   console.log( divide(4, 10) ); 
+   console.log( isEven(4) );
+}
+
+printOut();
+
 // Addition:
 // Make the printOut function take two numbers as arguments
-
+function printOutAddition(number1, number2)
+{
+    console.log( `addition: multiplication: ${ multiplicate(number1, number2)}` );
+    console.log( `addition: division: ${ divide(number1, number2)}` ); 
+    console.log( `addition: isEven: ${isEven(number1)}` );
+}
+printOutAddition(1000, 838736);
 
 // Anonymous functions
-// TODO
+let anonymousFunction = function () {
+    console.log("Hello from the anonymous function")
+}
+anonymousFunction();
 
 
 // Exercise
 // Create an object called mathHelper. Add four properties to this object 
 // - multiplicate
 // - divide
-// - isEven
+// - isEven 
 // - printOut
-// The functionality is exactly the same as the 
+// The functionality of these functions is exactly the same as the exercise above
+// Use anonymous functions in these properties
+// Make sure this object will result in the same output as the exercise above, only difference is that you call the printOut function by accessing the mathHelper object first.
+// ie, I need to be able to call the function like this: mathHelper.printOut(27, 29);
 
+
+// Addition
 // Now add an extra property called counter. The default value of this property is 0. This property will keep track of how many times a function of the mathHelper has been called. This means that every time multiplicate, divide, isEven or printOut is called, the counter needs to be incremented with 1.
