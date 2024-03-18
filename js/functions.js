@@ -132,6 +132,9 @@ function printOutAddition(number1, number2)
 printOutAddition(1000, 838736);
 
 // Anonymous functions
+// Anonymous functions don't have a name, their functionality is returned immediately to the variable or property it's being assigned to. 
+// It has some consequences for using the 'this' keyword.
+// Basically, when using functions inside of objects, it's always better to used anonymous functions so you can make use of the this keyword in order to refer to the variable itself.
 let anonymousFunction = function () {
     console.log("Hello from the anonymous function")
 }
@@ -148,7 +151,62 @@ anonymousFunction();
 // Use anonymous functions in these properties
 // Make sure this object will result in the same output as the exercise above, only difference is that you call the printOut function by accessing the mathHelper object first.
 // ie, I need to be able to call the function like this: mathHelper.printOut(27, 29);
-
+let mathHelper = {
+    multiplicate: function (number1, number2)
+        {
+            return number1 * number2;
+        },
+    divide: function (number1, number2)
+        {
+            return number1 / number2;
+        },
+    isEven: function (number1)
+        {
+            return (number1 % 2) ? false : true;
+        },
+    printOut: function (number1, number2)
+    {
+        console.log( `object: multiplication: ${ this.multiplicate(number1, number2)}` );
+        console.log( `object: division: ${ this.divide(number1, number2)}` ); 
+        console.log( `object: isEven: ${ this.isEven(number1)}` );
+    }
+}
+mathHelper.printOut(39, 49);
 
 // Addition
-// Now add an extra property called counter. The default value of this property is 0. This property will keep track of how many times a function of the mathHelper has been called. This means that every time multiplicate, divide, isEven or printOut is called, the counter needs to be incremented with 1.
+// Now add an extra property to the mathHelper object called counter. The default value of this property is 0. This property will keep track of how many times a function of the mathHelper has been called. This means that every time multiplicate, divide, isEven or printOut is called, the counter needs to be incremented with 1.
+
+let mathHelperAddition = {
+    counter: 0,
+    multiplicate: function (number1, number2)
+        {
+            ++this.counter;
+            return number1 * number2;
+        },
+    divide: function (number1, number2)
+        {
+            ++this.counter;
+            return number1 / number2;
+        },
+    isEven: function (number1)
+        {
+            ++this.counter;
+            return (number1 % 2) ? false : true;
+        },
+    printOut: function (number1, number2)
+    {
+        ++this.counter;
+        console.log( `object addition: multiplication: ${ this.multiplicate(number1, number2)}` );
+        console.log( `object addition: division: ${ this.divide(number1, number2)}` ); 
+        console.log( `object addition: isEven: ${ this.isEven(number1)}` );
+    }
+}
+
+mathHelperAddition.isEven(39);
+mathHelperAddition.divide(39, 49);
+mathHelperAddition.multiplicate(39, 49);
+mathHelperAddition.printOut(39, 49);
+
+console.log(`Object addition counter: ${mathHelperAddition.counter} methods have been called`);
+
+
