@@ -48,7 +48,7 @@ document.getElementById("alertBox1").classList.toggle("alert-danger", conditionT
 
 // Add/remove multiple classes with spread operator (...classes)
 let classList = ["alert-danger", "box1"];
-document.getElementById("alertBox1").classList.add(...classList),    
+document.getElementById("alertBox1").classList.add(...classList);  
 
 
 // Exercise
@@ -67,7 +67,23 @@ document.getElementById("alertBox1").classList.add(...classList),
 
 // Add HTML to existing document
 
-// Advanced method
+// Adding/manipulating HTML elements
+document.getElementById("container01").innerHTML = 'this content was added by using JS'
+
+document.getElementById("container02").innerHTML = '<h3>You can also add HTML elements, the way you would in any HTML document</h3>';
+
+// Exercise
+// Create an array called llmModels, this array contains objects with the following properties: name & website. Add at least 3 models (ie. chatGpt, Midjourney, Gemini)
+// In your HTML, create an element that will be the container that will be the placeholder of the HTML we are going to print out.
+// Using JavaScript, add a <ul></ul> element to the innerHTML of the container
+// Loop over the values of the llmModels array. Every value should be a list item (ie. <li>) and every value should be a link that shows the name of the LLM linking to the website (ie. <a href="url">llm name</a>) 
+// Make sure your HTML is valid (ie. the closing </ul> tag should come after the looping of the values, all <li>-items have a closing </li>-tag in the appropiate place)
+
+// Additional exercise
+// Visualisation of the table of multiplication by showing it in an actual <table> element
+// Remember: nesting for-loops!
+
+// Advanced method for creating HTML-elements
 /*
     function create(htmlStr) {
         var frag = document.createDocumentFragment(),
@@ -83,3 +99,6 @@ document.getElementById("alertBox1").classList.add(...classList),
     // You can use native DOM methods to insert the fragment:
     document.body.insertBefore(fragment, document.body.childNodes[0]);
 */
+
+// Using templates
+// TBC?
