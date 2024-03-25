@@ -61,9 +61,22 @@ document.getElementById("alertBox1").classList.add(...classList);
 // Use JS to get the value from the input field
 // Use JS to figure out whether the name is on the guestlist
 // If the name is on the guestlist you need to change the background color of the paragraph by adding a class called called 'allowed' to the bouncer paragraph class list
-// If the name is not on the guestlist you need to change the background color of the paragrapg by adding a class called banned to the bouncer paragrapg class list
+// If the name is not on the guestlist you need to change the background color of the paragraph by adding a class called banned to the bouncer paragrapg class list
 // Note: you can do this by using classes, create a class called 'allowed' and 'banned' in a css file
 // Note: we'll see how you can listen to immediate changes in the input field when we're dealing with event listeners, or... you can do the additional exercise ;)
+let guests = ["Luis", "Laura", "Jha"];
+let visitor = document.getElementById("guestList").value;
+
+let visitorIsAllowed = guests.includes(visitor);
+
+let bouncerParagraph = document.getElementById("bouncer");
+
+if (visitorIsAllowed) {
+    bouncerParagraph.classList.add('alert', 'allowed');
+} else {
+    bouncerParagraph.classList.add('alert', 'banned');
+}
+
 
 // Add HTML to existing document
 
@@ -72,11 +85,18 @@ document.getElementById("container01").innerHTML = 'this content was added by us
 
 document.getElementById("container02").innerHTML = '<h3>You can also add HTML elements, the way you would in any HTML document</h3>';
 
+let tempHTML =  '<ul>';
+tempHTML += '<li>first list item</li>';
+tempHTML += '<li>second list item</li>';
+tempHTML += '</ul>';
+
+document.getElementById("container03").innerHTML = tempHTML;
+
 // Exercise
-// Create an array called llmModels, this array contains objects with the following properties: name & website. Add at least 3 models (ie. chatGpt, Midjourney, Gemini)
+// Create an array called llModels, this array contains objects with the following properties: name & website. Add at least 3 models (ie. chatGpt, Midjourney, Gemini)
 // In your HTML, create an element that will be the container that will be the placeholder of the HTML we are going to print out.
 // Using JavaScript, add a <ul></ul> element to the innerHTML of the container
-// Loop over the values of the llmModels array. Every value should be a list item (ie. <li>) and every value should be a link that shows the name of the LLM linking to the website (ie. <a href="url">llm name</a>) 
+// Loop over the values of the llModels array. Every value should be a list item (ie. <li>) and every value should be a link that shows the name of the LLM linking to the website (ie. <a href="url">llm name</a>) 
 // Make sure your HTML is valid (ie. the closing </ul> tag should come after the looping of the values, all <li>-items have a closing </li>-tag in the appropiate place)
 
 // Additional exercise
