@@ -99,9 +99,66 @@ document.getElementById("container03").innerHTML = tempHTML;
 // Loop over the values of the llModels array. Every value should be a list item (ie. <li>) and every value should be a link that shows the name of the LLM linking to the website (ie. <a href="url">llm name</a>) 
 // Make sure your HTML is valid (ie. the closing </ul> tag should come after the looping of the values, all <li>-items have a closing </li>-tag in the appropiate place)
 
+let llModels = [
+    {
+        name: 'ChatGPT',
+        website: 'https://chatgpturl.com.com',
+    },
+    {
+        name: 'MidJourney',
+        website: 'https://MidJourney.com.com',
+    },
+    {
+        name: 'Gemini',
+        website: 'https://Gemini.com.com',
+    },
+]
+
+let llmContainerElement = document.getElementById('llmContainer');
+let tempHTML2 = '<ul>';
+
+for(llm of llModels)
+{
+    tempHTML2 += '<li>';
+    tempHTML2 += `<a href="${llm.website}">${llm.name}</a>`;
+    tempHTML2 += '</li>';
+}
+
+tempHTML2 += '</ul>';
+
+llmContainerElement.innerHTML = tempHTML2;
+
+
 // Additional exercise
 // Visualisation of the table of multiplication by showing it in an actual <table> element
 // Remember: nesting for-loops!
+
+let tempHTML3 = "";
+
+let tableMultiplicationContainerElement = document.getElementById('tableMultiplicationContainer');
+
+tempHTML3 += '<table>';
+for(let table = 1; table < 10; ++table)
+{
+    tempHTML3 += '<tr>';
+
+    tempHTML3 += '<th>';
+    tempHTML3 += table;
+    tempHTML3 += '</th>';
+    
+    // create row
+    for(let multiplication = 1; multiplication < 10; ++multiplication)
+    {
+        tempHTML3 += '<td>';
+        
+        tempHTML3 += table * multiplication;
+        tempHTML3 += '</td>';
+    }
+
+    tempHTML3 += '</tr>';
+}
+tempHTML3 += '</table>';
+tableMultiplicationContainerElement.innerHTML = tempHTML3;
 
 // Advanced method for creating HTML-elements
 /*
