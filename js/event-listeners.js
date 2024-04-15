@@ -46,4 +46,10 @@ document.getElementById("header01").addEventListener("click", (event) => {
 document.querySelector('#paragraph01 span').addEventListener("click", (event) => {
     document.getElementById('paragraph01').remove();
 });
+
+// Exercise
+// Create a button (you can use a regular span element that contains the word 'add', ie. <span>add</span>)
+// add an event listener to that button that listens to the click event
+// When you click on the 'add'-button a list item (<li></li>) is added to an empty unordered list (<ul></ul>) that is located below the 'add'-button
+
   
