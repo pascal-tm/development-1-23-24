@@ -53,6 +53,27 @@ document.querySelector('#paragraph01 span').addEventListener("click", (event) =>
 // When you click on the 'add'-button a list item (<li>New item (<span>x</span>)</li>) is added to an empty unordered list (<ul></ul>) that is located below the 'add'-button and which will function  as your container.
 // The newly added items also have a remove button (ie. <span>x</span>). When you click on that button, the list item is removed.
 
+document.getElementsByClassName('ex-01-add')[0]
+    .addEventListener('click', (event) => {
+
+        document.getElementsByClassName('ex-01-container')[0].innerHTML += '';
+
+        document.getElementsByClassName('ex-01-container')[0].innerHTML += '<li>New item (<span class="ex-01-remove">x</span>)</li>';
+    });
+
+    // Add an event listener to all elements that have the class 'ex-01-remove'
+    // We are approaching it from the body-element because then we can attach event listeners to elements that are added after the HTML has been already rendered
+    document.querySelector('body').addEventListener('click', function(event) {
+        // Here we are looking at the target on which is clicked
+        // If it contains the ex-01-remove class, then we can remove the li-element
+        if (event.target.className == 'ex-01-remove' ) {
+            // We have clicked on the span, but need to remove the entire li-element
+            // We do this by looking for the closes li-element from the perspective of the span
+            event.target.closest('li').remove();
+        }
+    });
+
+
 // Additional exercise
 // Create an array called guestlist that contains some names
 // When opening the document, these name are shown in a <ul></ul> element by adding them as list-items (<li></li>)
