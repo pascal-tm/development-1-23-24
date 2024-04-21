@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JavaScript</title>
+    <title>Git course</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/normalize.css" />
     <link rel="stylesheet" href="../../css/main.css" />
@@ -14,53 +14,188 @@
 
     <p><a href="../../index.html">back to overview</a></p>   
 
-    <h2>What is Git</h2>
+        <div class="narrow-container">
+        <h2>What is Git</h2>
 
-    <p>Git is a version managing system created by Linus Torvald, the same guy who also created Linux. It's a way to keep track of code changes and allows for easy collaboration on that code. It also serves as a way to back up your code, if you use some repository (=place where your code lives) that can be accessed online.</p>
+        <p>Git is a version managing system created by Linus Torvald, the same guy who also created Linux. It's a way to keep track of code changes and allows for easy collaboration on that code. It also serves as a way to back up your code, if you use some repository (=place where your code lives) that can be accessed online.</p>
 
-    <h2>What is GitHub</h2>
+        <h2>What is GitHub</h2>
 
-    <p></p>
+        <p>GitHub's mascotte is Octocat. He will make all kinds of anouncements about the GitHub ecospace and will be your guide that let's you know what's up with your repositories</p>
 
-    <p>GitHub's mascotte is Octocat. He will make all kinds of anouncements about the GitHub ecospace and will be your guide that let's you know what's up with your repositories</p>
+        <p class="center-image">
+            <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Octocat">
+        </p>
 
-    <p class="center-image">
-        <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Octocat">
-    </p>
+        <p>GitHub runs git. It is basically a collection store for everone who wants to share their code. There are some alternatives to GitHub, ie. Bitbucket, GitLab, ... They all serve a specific target audience, but GitHub offers free public repositories (in order to stimulate open source code), which is why we are using it.</p>
+
+        <h2>Install git locally</h2>
+
+        <p>Using <a href="https://desktop.github.com/">GitHub GUI </a> (user interface provided by GitHub that runs on top of Git) or <a href="https://git-scm.com/downloads">Git manually</a>.</p>
+
+        
+        <h2>Getting started</h2>
+
+        <p>Create account on <a href="https://www.github.com">GitHub</a></p>
+        
     
+        <h2>Create repository on GitHub (online)</h2>
 
-    <h2>Install git locally</h2>
-
-    <p>Using <a href="https://desktop.github.com/">GitHub GUI</a (user interface provided by GitHub that runs on top of Git) or <a href="https://git-scm.com/downloads">Git manually</a>.</p>
-
-    <h2>Getting started</h2>
-
-    <p>Create account on <a href="https://www.github.com">github</a></p>
+        <p>Let's do this together!</p>
+        
     
-   <h2>Create repository on GitHub (online)</h2>
+        <h2>Clone online repository to local machine</h2>
 
-   <h2>Download repository on your local machine</h2>
+        <div class="codeblock">
+            <pre>git clone https://github.com/pascal-tm/development-1-23-24.git</pre>
+        </div>
+        
+        <p>Note: change the url to the URL of your repository</p>
+    
+        <p>TODO?!
+            - create personal access token (settings-> developer settings -> ...)
+        - make some changes
+        - commit those changes
+        </p>
 
-   <div class="codeblock">
-       <pre>> git</pre>
-   </div>
-  
-    - clone repository locally
-    - create personal access token (settings-> developer settings -> ...)
-    - make some changes
-    - commit those changes
+        
+        <h2>Checking the status of your git repository</h2>
 
-    - staging
-        - adding files to 'watch list'
-    - committing
-        - like an executive that says: these files are the new version
-    - creating a pull request
-    - merging
-    - merge conflicts
-        - fixing merge conflicts
-    - .gitignore
-    - readme.md
-        - markdown
+        <div class="codeblock">
+            <pre>git status</pre>
+        </div>
+
+        <p>This command gives you an overview of what has happened in the repository since the last time you commited some changes. It will list newly added, untracked files and/or files that have been changed</p>
+
+        <h2>Staging files</h2>
+
+        <p>Staging means that git needs to keep track of this file. Sometimes it's necessary to exclude files from git, for instance because they contain sensitive information like passwords.</p>
+            
+        <div class="codeblock">
+            <pre>git add .</pre>
+        </div>
+
+        <p>the . operator means 'all', this will add all the files to te stage. This means git will start keeping track of them. You will usually use this command.</p>
+
+        <p>Sometimes you want to add files individually, then you just change the . operator with the path to the filename:</p>
+
+        <div class="codeblock">
+            <pre>git add css/main.css</pre>
+        </div>
+
+        
+        <h2>Commiting </h2>
+
+        <p>When you commit, it means that you have created a new version of your application. You should commit for every functionality you add. This seems like a lot of work, but it will save your life when you need to changes that you have previously removed. There are no rules, but this is a best practice that what will make your life as a developer easier.</p>
+
+        <div class="codeblock">
+            <pre>git commit -m "Add description to readme"</pre>
+        </div>
+
+        <p>There is also a way to do an <b>add and commit at the same time</b>. Use the following shorthand:</p>
+        
+        <div class="codeblock">
+            <pre>git commit -am "Add description to readme"</pre>
+        </div>
+
+        <p>A lot is written about when to commit and what commit messages to use. I'll save you the details, but try to use a descriptive name for your commit messages, so that by looking at the commit history it is clear what changes have been made. Messages like 'Change the document' are pretty useless, because they are too generic. 'Add description chapter to readme' is a lot more clear. Usually commit messages also start with a verb (add, change, remove, ...)</p>
+
+        <p>a the <i>a</i> flag stands for <i>add</i>, the <i>m</i>-flag for <i>message</i></p>
+
+        
+        <h2>Discarding changes</h2>
+
+        <p>It's possible that you made some changes to a file that you want to revert back to the original. If you haven't committed your changes, you can do this by discarding the file</p>
+        
+        <div class="codeblock">
+            <pre>git restore css/main.css</pre>
+        </div>
+
+        <p>If you want to discard all changes, you use the same operator as described before:</p>
+        
+        <div class="codeblock">
+            <pre>git restore .</pre>
+        </div>
+
+        
+        <h2>Branches</h2>
+        
+        <p>Branches are versions of your application. The main branch is usually called <i>main</i> or <i>master</i>. You can see all the branches of your repository by executing the following command:</p>
+
+        <div class="codeblock">
+            <pre>git branch</pre>
+        </div>
+
+        <p>If you want to create a new version, to add a new feature, or because you want to experiment with your code, but don't want to mess up your original code, you create a new branch</p>
+
+        <div class="codeblock">
+            <pre>git checkout -b experimental-feature</pre>
+        </div>
+
+        <p>A new branch <i>experimental-feature</i> has been created and you are switched to this branch automatically. To see this, just execute the git branch command again.</p>
+
+        <p>If you want to switch to a different branch, you use the following command</p>
+
+        <div class="codeblock">
+            <pre>git checkout -b master</pre>
+        </div>
+
+        <p>Note that you can only do this if you have committed the changes that in your branch. You can chose to either commit, or discard your changes as described above. This is as a failsafe to make sure you don't lose your changes by accident.</p>
+
+        <p>If you want to remove a branch you can execute the following command:</p>
+
+        <div class="codeblock">
+            <pre>git branch -d experimental-feature</pre>
+        </div>
+
+
+        <h2>Merging branches</h2>
+
+        <p>At some point, when you are done working on changes in a specific branch, you want to merge that branch with the official version, which in your case will be the main/master branch</p>
+
+        <p>You can merge this by executing the following command:</p>
+        
+        <div class="codeblock">
+            <pre>git merge master experimental-feature</pre>
+        </div>
+
+        <p>Now it's possible that the files in your main branch have changes in the meanwhile. Then you will have caused a so called <i>merge conflict</i>. You will have to resolve these conflicts manually. Git has a special way to show you where the conflict takes place. After you have fixed the merge conflict, you can now commit these changes with a commit messages that says something like <i>fix merge conflicts</i>.</p>
+
+        
+        <h2>Pushing your changes to your online repository</h2>
+
+        <p>Now that you have made some changes to your repository, you might want to back them up or publish them to the rest of the world. You do this by pushing your changes to the origin. Execute the following command:</p>
+
+        <div class="codeblock">
+            <pre>git push origin master</pre>
+        </div>
+        
+        
+        <h2>Some standard Git files</h2>
+
+        <h3>.gitignore</h3>
+
+        <p>This file lists all the files that should never be tracked by git. If they are listed in this file, Git simply doesn't know they exist. This is handy if you want to store passwords, but you don't want them to be committed to the repository. They could end up online somewhere and you might not want that...</p>
+
+
+        <h3>README.md</h3>
+
+        <p>This file is usually used as an 'about me' of the repository. It explains what the application does, which version, what's on the changelog. Basically anything can go there, I use it to keep track of TODO's as well. It can be anything you want, but don't forget that this file is the first thing people will see when they visit your repository online, so don't do anything stupid like storing passwords or sensitive data in there.</p>
+
+        <p>As you might have noticed, it has a weird file extension: <b>.md</b> .md stands for markdown and is basically a simple form of HTML. You can check out the syntax here: <a href="https://www.markdownguide.org/cheat-sheet/">Markdown cheat sheet</a>. </p>
+
+        <h2>Extra resources</h2>
+
+        <a href="https://ohmygit.org/">Oh my git</a>
+
+        <p>
+            <video autoplay="autoplay" loop="loop" muted="muted" src="https://ohmygit.org/assets/videos/repository.mp4"></video>
+        </p>
+        
+        <p>
+            I haven't followed this tutorial myself, but it looked like a pretty interesting way to learn how git works. It should be easy enough to install.
+        </p>
+    </div>
     
 
 </body>
