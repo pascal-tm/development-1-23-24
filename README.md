@@ -6,5 +6,8 @@ additional information about the repo goes here.
 # Contributors 
 
 -your name goes here by creating a pull request-
+
 Jha 
 Agata
+Filip
+Andrea
