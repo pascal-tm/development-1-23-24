@@ -6,7 +6,12 @@ additional information about the repo goes here.
 # Contributors 
 
 -your name goes here by creating a pull request-
-Jha
-Laura
-Filip
-Andrea
+
+- Laura
+- Luis
+- Martin Fork 
+- Zori
+- Jha 
+- Agata
+- Filip
+- Andrea
