@@ -5,4 +5,10 @@ additional information about the repo goes here.
 
 # Contributors 
 
--Zori
+-your name goes here by creating a pull request-
+
+- Zori
+- Jha 
+- Agata
+- Filip
+- Andrea
