@@ -5,7 +5,12 @@ additional information about the repo goes here.
 
 # Contributors 
 
--your name goes here by creating a pull request-
+
+## Achieved the Open Sourcerer badge. 
+
+<img src="https://github.com/sagelga/github-achievement-cheatsheet/blob/main/img/open-sourcerer/open-sourcerer-default.png" height="75px" width="75px">
+
+Having your first pull request merged, good job!
 
 - Laura
 - Luis
