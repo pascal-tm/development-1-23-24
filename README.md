@@ -7,7 +7,8 @@ additional information about the repo goes here.
 
 -your name goes here by creating a pull request-
 
-Jha 
-Agata
-Filip
-Andrea
+- Zori
+- Jha 
+- Agata
+- Filip
+- Andrea
