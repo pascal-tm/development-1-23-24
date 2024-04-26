@@ -20,3 +20,4 @@ Having your first pull request merged, good job!
 - Agata
 - Filip
 - Andrea
+- Katarina 
