@@ -56,8 +56,6 @@ document.querySelector('#paragraph01 span').addEventListener("click", (event) =>
 document.getElementsByClassName('ex-01-add')[0]
     .addEventListener('click', (event) => {
 
-        document.getElementsByClassName('ex-01-container')[0].innerHTML += '';
-
         document.getElementsByClassName('ex-01-container')[0].innerHTML += '<li>New item (<span class="ex-01-remove">x</span>)</li>';
     });
 
