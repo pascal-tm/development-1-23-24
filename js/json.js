@@ -77,9 +77,20 @@ let peopleFromJsObjectStringified = JSON.stringify(peopleFromJsObject);
 console.log(peopleFromJsObjectStringified);
 
 // Exercise
+// Merging JSON (ie. local config + config from DB
+// Create an array that contains objects with the following properties: name, email
+// Create JSON string that has the same structure as the array. This means that it 
+// contains objects with the same properties: name, email
+// Each array (JS array and the JSON string) need to contain some example data.
+// The goal is to merge these two together. 
 
-// Merging JSON (ie. local config + config from DB)
+// Additional exercise
+// Create a JSON string that is an array, which has the same kind of objects 
+// as above, the only difference is that the 'name' property is now called surname
+// Try to find a way to merge both the JS and JSON array.
+
+
+// Additional exercise:
 
 // Fetching JSON from API (see REST call)
-
 // Use example REST api: https://jsonplaceholder.typicode.com/

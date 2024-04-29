@@ -55,7 +55,6 @@ document.querySelector('#paragraph01 span').addEventListener("click", (event) =>
 
 document.getElementsByClassName('ex-01-add')[0]
     .addEventListener('click', (event) => {
-
         document.getElementsByClassName('ex-01-container')[0].innerHTML += '<li>New item (<span class="ex-01-remove">x</span>)</li>';
     });
 
@@ -79,5 +78,40 @@ document.getElementsByClassName('ex-01-add')[0]
 // When you open the document, all the names in the guestlist array are shown in the ul-element.
 // When you write a name in the input field, the name is added to the array and to the ul-element
 // You should be able to remove any name from the ul-element (make sure to also delete that name from the guestlist array)
+
+// Solution provided by Andrea!
+
+let guestlist2 = ["Alice", "Bob", "Charlie", "Kartoffel", "patata", "potatoe"];
+let guestlistElement = document.getElementById("guestlist-2");
+let addButton = document.getElementById("addButton");
+let guestNameInput = document.getElementById("guestName");
+
+function updateGuestlist() {
+  guestlistElement.innerHTML = ""; // Clear existing list items
+
+  for (let key in guestlist2) {
+    let guest = guestlist2[key];
+    let listItem = document.createElement("li");
+    listItem.textContent = guest;
+    listItem.setAttribute ("data-id",key);
+    listItem.addEventListener("click", () => {
+        let index = listItem.getAttribute("data-id")
+        guestlist2.splice(index, 1);
+        updateGuestlist();
+    });
+    guestlistElement.appendChild(listItem);
+  }
+}
+
+updateGuestlist(); // Display initial guest list
+
+addButton.addEventListener("click", () => {
+  let newGuestName = guestNameInput.value.trim();
+  if (newGuestName) {
+    guestlist2.push(newGuestName);
+    updateGuestlist();
+    guestNameInput.value = ""; // Clear input field
+  }
+});
 
   
