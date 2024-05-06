@@ -18,10 +18,6 @@ console.log("%cJS - REST", "font-size: 24px; font-weight: bold");
 /*
     Fetch is a library that allows you to easily execute REST calls. It's still JavaScript, but it
     provides some boilerplate functionality so you don't have write as much code as you usually should
-
-    As you can see the axios library has been downloaded and loaded in the HTML-document. Make sure
-    the axios library is loaded BEFORE the script that uses the library, because the browser will load
-    these file in consecutive order.
 */
 
 // GET request
@@ -34,9 +30,26 @@ console.log("%cJS - REST", "font-size: 24px; font-weight: bold");
 // Fetching JSON from API (see REST call)
 // Use example REST api: https://jsonplaceholder.typicode.com/
 
+// Exercise:
+// Fetch all posts from the JSON-placeholder application
+
 fetch('https://jsonplaceholder.typicode.com/posts')
   .then((response) => response.json())
   .then((json) => console.log(json));
+
+// Additional exerise:
+// Just fetch one post from the API
+  
+fetch('https://jsonplaceholder.typicode.com/posts/3')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+// Filter on a specific property that equals a specific value
+// Ie. search for the post that contains the title "qui est esse"
+
+fetch('https://jsonplaceholder.typicode.com/posts?title=qui%20est%20esse')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
 
 // CREATE

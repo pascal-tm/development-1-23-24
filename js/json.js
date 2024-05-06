@@ -77,20 +77,71 @@ let peopleFromJsObjectStringified = JSON.stringify(peopleFromJsObject);
 console.log(peopleFromJsObjectStringified);
 
 // Exercise
-// Merging JSON (ie. local config + config from DB
+// Merging JSON (ie. local config + config from DB)
 // Create an array that contains objects with the following properties: name, email
 // Create JSON string that has the same structure as the array. This means that it 
 // contains objects with the same properties: name, email
 // Each array (JS array and the JSON string) need to contain some example data.
-// The goal is to merge these two together. 
+// The goal is to merge these two together.
+
+let  localConfig = [
+    {
+        name: "Pascal",
+        email: "pascal@thomasmore.be"
+    },
+    {
+        name: "Jha",
+        email: "jha@thomasmore.be"
+    }
+];
+
+let configFromDbJsonString = '[{"name":"Andrea","email": "andrea@thomasmore.be"},{"name": "Filip","email": "filip@thomasmore.be"}]';
+
+let configFromDb = JSON.parse(configFromDbJsonString);
+
+let mergedConfigs = localConfig.concat(configFromDb);
+
+console.log(mergedConfigs);
 
 // Additional exercise
 // Create a JSON string that is an array, which has the same kind of objects 
 // as above, the only difference is that the 'name' property is now called surname
 // Try to find a way to merge both the JS and JSON array.
+let  localConfigEx2 = [
+    {
+        name: "Pascal",
+        email: "pascal@thomasmore.be"
+    },
+    {
+        name: "Jha",
+        email: "jha@thomasmore.be"
+    }
+];
 
+let configFromDbJsonStringEx2 = '[{"surname":"Andrea","email": "andrea@thomasmore.be"},{"surname": "Filip","email": "filip@thomasmore.be"}]';
 
-// Additional exercise:
+let configFromDbEx2 = JSON.parse(configFromDbJsonStringEx2);
 
-// Fetching JSON from API (see REST call)
-// Use example REST api: https://jsonplaceholder.typicode.com/
+let configFromDbEx2Converted = convertUserObject(configFromDbEx2);
+
+// Converts objects containing 'surname' key to 'name' key.
+function convertUserObject(userObject)
+{
+    let containerArray = [];
+
+    for (let user of userObject)
+    {
+        containerArray.push(
+            {
+                name: user.surname,
+                email: user.email
+            }
+        )
+    }
+
+    return containerArray;
+}
+
+let mergedConfigsEx2 = localConfig.concat(configFromDb);
+
+console.log(mergedConfigsEx2);
